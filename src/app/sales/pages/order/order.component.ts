@@ -1,16 +1,53 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { Hero, Color } from './../../interfaces/sales.interfaces';
 
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class OrderComponent implements OnInit {
+export class OrderComponent {
+  upperCase = false;
+  orderBy = '';
+  heroes: Hero[] = [
+    {
+      name: 'Superman',
+      fly: true,
+      color: Color.blue,
+    },
+    {
+      name: 'Batman',
+      fly: false,
+      color: Color.black,
+    },
+    {
+      name: 'Robin',
+      fly: false,
+      color: Color.green,
+    },
+    {
+      name: 'Flash',
+      fly: false,
+      color: Color.red,
+    },
+    {
+      name: 'Linterna Verde',
+      fly: true,
+      color: Color.green,
+    },
+    {
+      name: 'Mujer Maravilla',
+      fly: false,
+      color: Color.yellow,
+    },
+  ];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  changeCase(): void {
+    this.upperCase = !this.upperCase;
   }
 
+  changeOrder(value: string): void {
+    this.orderBy = value;
+  }
 }
