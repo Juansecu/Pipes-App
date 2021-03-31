@@ -1,0 +1,144 @@
+<div class="text-layout">
+  <h1>DecimalPipe & PercentPipe</h1>
+  <p>
+    Pipes incluídos en Angular - Usualmente en el CommonModule
+  </p>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-6">
+    <p-card header="Ventas netas" subheader="del presente año">
+      <ul>
+        <li>
+          <i class="pi pi-dollar"></i>
+          netSales
+        </li>
+
+        <li>
+          <i class="pi pi-dollar"></i>
+          netSales | number
+        </li>
+
+        <li>
+          <i class="pi pi-dollar"></i>
+          netSales | number : '1.2-2'
+        </li>
+      </ul>
+    </p-card>
+  </div>
+
+  <div class="p-col-6">
+    <p-card header="Ventas netas" subheader="del presente año">
+      <ul>
+        <li>
+          <i class="pi pi-dollar"></i>
+          {{ netSales }}
+        </li>
+
+        <li>
+          <i class="pi pi-dollar"></i>
+          {{ netSales | number }}
+        </li>
+
+        <li>
+          <i class="pi pi-dollar"></i>
+          {{ netSales | number : '1.2-2' }}
+        </li>
+      </ul>
+    </p-card>
+  </div>
+
+  <div class="p-col-6">
+    <p-card header="Ventas brutas" subheader="del presente año">
+      <ul>
+        <li>
+          <i class="pi pi-dollar"></i>
+          netSales + 2000000
+        </li>
+
+        <li>
+          <i class="pi pi-dollar"></i>
+          (netSales + 2000000) | currency
+        </li>
+
+        <li>
+          <i class="pi pi-dollar"></i>
+          (netSales + 2000000) | currency : 'CAD '
+        </li>
+
+        <li>
+          <i class="pi pi-dollar"></i>
+          (netSales + 2000000) | currency : 'CAD' : 'symbol-narrow'
+        </li>
+
+        <li>
+          <i class="pi pi-dollar"></i>
+          (netSales + 2000000) | currency : 'CAD' : 'symbol-narrow' : '1.0-4'
+        </li>
+      </ul>
+    </p-card>
+  </div>
+
+  <div class="p-col-6">
+    <p-card header="Ventas brutas" subheader="del presente año">
+      <ul>
+        <li>
+          <i class="pi pi-dollar"></i>
+          {{ netSales + 2000000 }}
+        </li>
+
+        <li>
+          {{ (netSales + 2000000) | currency }}
+        </li>
+
+        <li>
+          {{ (netSales + 2000000) | currency : 'CAD ' }}
+        </li>
+
+        <li>
+          {{ (netSales + 2000000) | currency : 'CAD' : 'symbol-narrow' }}
+        </li>
+
+        <li>
+          {{ (netSales + 2000000) | currency : 'CAD' : 'symbol-narrow' : '1.0-4' }}
+        </li>
+      </ul>
+    </p-card>
+  </div>
+
+  <div class="p-col-6">
+    <p-card header="Margen de ganancias" subheader="del presente año">
+      <ul>
+        <li>
+          percent
+        </li>
+
+        <li>
+          percent | percent
+        </li>
+
+        <li>
+          percent | percent : '2.2-2'
+        </li>
+      </ul>
+    </p-card>
+  </div>
+
+  <div class="p-col-6">
+    <p-card header="Margen de ganancias" subheader="del presente año">
+      <ul>
+        <li>
+          {{ percent }}
+        </li>
+
+        <li>
+          {{ percent | percent }}
+        </li>
+
+        <li>
+          {{ percent | percent : '2.2-2' }}
+        </li>
+      </ul>
+    </p-card>
+  </div>
+</div>
